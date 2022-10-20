@@ -95,10 +95,10 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
-
 html {
-  background-color: #fff;
+  background-color: #ECDEC9;
   height: 100%;
+  width: 100%;
 }
 
 body {
@@ -109,27 +109,25 @@ body {
 }
 
 .wrapper {
-  /*add display:flex and set justify-content to space-between*/
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  font-weight: 700;
+  flex-direction: row;
+  flex-wrap: wrap;
+  font-weight: 700; 
 }
 
 .div-1, .div-2, .div-3 {
-  /*give the divs a width of 30%, add display:flex, set justify-content and align-items to center*/
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #fff;
-  line-height: 1.5em;
-  font-size: 1.6em;
-  background-color: #f16059;
-  height: 300px;
-  width: 30%;
+  color: #382107;
+  line-height: 1.25em;
+  font-size: 1.25em;
+  height: auto;
 }
 
-
-
+    
 
 /* ==========================================================================
    Helper classes
@@ -210,6 +208,22 @@ body {
    These examples override the primary ('mobile first') styles.
    Modify as content requires.
    ========================================================================== */
+@media (max-width: 1199px) {
+  .div-1, .div-2 {
+    border-bottom: 1px solid #382107;
+  }
+}
+
+@media all and (min-width: 1200px) {
+  .div-1, .div-2, .div-3 {
+    flex-basis: 30%;
+  }
+      
+  .div-1, .div-2 {
+    border-right: 1px solid #382107;
+    padding-right: 1em;
+  }
+}
 
 @media print,
        (-webkit-min-device-pixel-ratio: 1.25),
